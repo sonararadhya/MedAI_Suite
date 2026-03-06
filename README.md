@@ -6,7 +6,7 @@ An intelligent desktop-based Python application that assists users in identifyin
 
 ## 🌟 Description
 
-Healthcare_Chatbot is a smart healthcare assistant that allows users to interact in natural language, input symptoms, and receive likely health condition predictions along with helpful guidance. The system integrates machine learning models with custom logic and optionally OpenAI GPT-powered interaction to enhance response quality. It uses **Tkinter** for GUI and standard Python libraries for data processing. :contentReference[oaicite:1]{index=1}
+Healthcare_Chatbot is a smart healthcare assistant that allows users to interact in natural language, input symptoms, and receive likely health condition predictions along with helpful guidance. The system integrates machine learning models with custom logic and optionally OpenAI GPT-powered interaction to enhance response quality. It uses **Tkinter** for GUI and standard Python libraries for data processing. 
 
 ---
 
