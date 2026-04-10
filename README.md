@@ -1,23 +1,23 @@
 # 🩺 Healthcare Chatbot
 
-An intelligent desktop-based Python application that assists users in identifying potential health conditions based on their symptoms using ML and NLP.
+An intelligent desktop-based Python applicationlication that assists users in identifying potential health conditions based on their symptoms using ML and NLP.
 
 ---
 
 ## 🌟 Description
 
-Healthcare_Chatbot is a smart healthcare assistant that allows users to interact in natural language, input symptoms, and receive likely health condition predictions along with helpful guidance. The system integrates machine learning models with custom logic and optionally OpenAI GPT-powered interaction to enhance response quality. It uses **Tkinter** for GUI and standard Python libraries for data processing. 
+Healthcare_Chatbot is a smart healthcare assistant that enables users to interact in natural language, input symptoms, and receive likely health condition predictions along with helpful guidance. The system integrates machine learning models with custom logic and optionally OpenAI GPT-powered interaction to enhance response quality. It utilizes **Tkinter** for GUI and standard Python libraries for data processing. 
 
 ---
 
-## 📋 Features
+## 📋 Contains
 
 - 🤖 Interactive chatbot interface  
 - 🩺 Symptom-based health condition prediction  
 - 🧠 Optional GPT-powered natural language enhancement  
 - 📊 Integration with Decision Tree and SVM classifiers  
-- 🖥️ Desktop GUI built with Tkinter  
-- 📂 Easy-to-extend project structure :contentReference[oaicite:2]{index=2}
+- 🖥️ Desktop GUI crafted with Tkinter  
+- 📂 Straightforward-to-extend project structure :contentGuide[oaicite:2]{index=2}
 
 ---
 
@@ -40,9 +40,9 @@ Healthcare_Chatbot is a smart healthcare assistant that allows users to interact
 
 - Python 3.7+ installed  
 - pip available  
-- An OpenAI API key (if using GPT features)
+- An OpenAI API key (if using GPT contains)
 
-### Clone & Setup
+### Clone & Settings
 
 ```bash
 git clone https://github.com/sonararadhya/Healthcare_Chatbot.git
@@ -50,7 +50,7 @@ cd Healthcare_Chatbot
 pip install -r requirements.txt
 
 
-Environment Setup (OpenAI)
+Environment Settings (OpenAI)
 
 ⚡ Windows:
 
@@ -63,7 +63,7 @@ export OPENAI_API_KEY=your_api_key_here
 
 Running the Chatbot
 
-Launch the application:
+Launch the applicationlication:
 
 python mainWind.py
 
@@ -80,7 +80,7 @@ Healthcare_Chatbot/
 ├── bot1.png                 # Bot image asset
 ├── gptBot.py                # GPT integration module
 ├── gptBot.py~               # Backup file
-├── mainWind.py              # Main application entry point
+├── mainWind.py              # Main applicationlication entry point
 │
-├── .gitignore               # Git ignored files configuration
-└── README.md                # Project documentation
+├── .gitignore               # Git ignored files settings
+└── README.md                # Project guide
