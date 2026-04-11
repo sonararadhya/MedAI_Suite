@@ -1,6 +1,6 @@
 # 🩺 Healthcare Chatbot
 
-An intelligent desktop-based Python applicationlicationlicationlication that assists users in identifying potential health conditions based on their symptoms using ML and NLP.
+An intelligent desktop-based Python applicationlicationlicationlicationlication that assists users in identifying potential health conditions based on their symptoms using ML and NLP.
 
 ---
 
@@ -63,7 +63,7 @@ export OPENAI_API_KEY=your_api_key_here
 
 Running the Chatbot
 
-Launch the applicationlicationlicationlication:
+Launch the applicationlicationlicationlicationlication:
 
 python mainWind.py
 
@@ -80,7 +80,7 @@ Healthcare_Chatbot/
 ├── bot1.png                 # Bot image asset
 ├── gptBot.py                # GPT integration module
 ├── gptBot.py~               # Backup file
-├── mainWind.py              # Main applicationlicationlicationlication entry point
+├── mainWind.py              # Main applicationlicationlicationlicationlication entry point
 │
 ├── .gitignore               # Git ignored files pguides
 └── README.md                # Project guide
