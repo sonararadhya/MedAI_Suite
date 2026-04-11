@@ -1,16 +1,16 @@
 # 🩺 Healthcare Chatbot
 
-An intelligent desktop-based Python applicationlicationlication that assists users in identifying potential health conditions based on their symptoms using ML and NLP.
+An intelligent desktop-based Python applicationlicationlicationlication that assists users in identifying potential health conditions based on their symptoms using ML and NLP.
 
 ---
 
 ## 🌟 Description
 
-Healthcare_Chatbot is a smart healthcare assistant that enables users to interact in natural language, input symptoms, and receive likely health condition predictions along with helpful guidance. The system integrates machine learning models with custom logic and optionally OpenAI GPT-powered interaction to enhance response quality. It utilizes **Tkinter** for GUI and standard Python libraries for data processing. 
+Healthcare_Chatbot is a smart healthcare assistant that facilitates users to interact in natural language, input symptoms, and receive likely health condition predictions along with helpful guidance. The system integrates machine learning models with custom logic and optionally OpenAI GPT-powered interaction to enhance response quality. It employs **Tkinter** for GUI and standard Python libraries for data processing. 
 
 ---
 
-## 📋 Contains
+## 📋 Incorporates
 
 - 🤖 Interactive chatbot interface  
 - 🩺 Symptom-based health condition prediction  
@@ -40,9 +40,9 @@ Healthcare_Chatbot is a smart healthcare assistant that enables users to interac
 
 - Python 3.7+ installed  
 - pip available  
-- An OpenAI API key (if using GPT contains)
+- An OpenAI API key (if using GPT incorporates)
 
-### Clone & Settings
+### Clone & Pguides
 
 ```bash
 git clone https://github.com/sonararadhya/Healthcare_Chatbot.git
@@ -50,7 +50,7 @@ cd Healthcare_Chatbot
 pip install -r requirements.txt
 
 
-Environment Settings (OpenAI)
+Environment Pguides (OpenAI)
 
 ⚡ Windows:
 
@@ -63,7 +63,7 @@ export OPENAI_API_KEY=your_api_key_here
 
 Running the Chatbot
 
-Launch the applicationlicationlication:
+Launch the applicationlicationlicationlication:
 
 python mainWind.py
 
@@ -80,7 +80,7 @@ Healthcare_Chatbot/
 ├── bot1.png                 # Bot image asset
 ├── gptBot.py                # GPT integration module
 ├── gptBot.py~               # Backup file
-├── mainWind.py              # Main applicationlicationlication entry point
+├── mainWind.py              # Main applicationlicationlicationlication entry point
 │
-├── .gitignore               # Git ignored files settings
+├── .gitignore               # Git ignored files pguides
 └── README.md                # Project guide
