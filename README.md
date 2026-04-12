@@ -1,6 +1,6 @@
 # 🩺 Healthcare Chatbot
 
-An intelligent desktop-based Python applicationlicationlicationlicationlication that assists users in identifying potential health conditions based on their symptoms using ML and NLP.
+An intelligent desktop-based Python application that assists users in identifying potential health conditions based on their symptoms using ML and NLP.
 
 ---
 
