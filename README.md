@@ -170,3 +170,6 @@ For each disease in the knowledge base:
 <div align="center">
   <sub>Built with precision by <a href="https://github.com/sonararadhya">sonararadhya</a></sub>
 </div>
+
+---
+*📝 Last maintained: April 16, 2026 at 21:50 UTC*
