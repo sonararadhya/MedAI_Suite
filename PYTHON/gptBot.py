@@ -13,8 +13,12 @@ from sklearn.svm import SVC
 import csv
 import os
 import warnings
-import openai
-openai.api_key = os.getenv("")
+import google.generativeai as genai
+api_key = os.getenv("GEMINI_API_KEY", "")
+if api_key:
+    genai.configure(api_key=api_key)
+else:
+    print("WARNING: GEMINI_API_KEY environment variable not set")
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 class GptBot:
@@ -87,17 +91,20 @@ class GptBot:
         self.chat_history.grid(row=0, column=0, padx=10, pady=10, columnspan = 3,sticky="nsew")
         self.root.bind('<Return>', lambda event=None: self.send_message())
 
-        self.messages = [{"role": "system", "content": "You are a Doctor, Pysician, Medical, HealthCare Assistent"}]
+        self.model = genai.GenerativeModel('gemini-1.5-flash-latest')
+        self.chat_session = self.model.start_chat(history=[{"role": "user", "parts": ["You are a Doctor, Pysician, Medical, HealthCare Assistent"]}, {"role": "model", "parts": ["Understood. I am ready to advise as a Medical Assistant."]}])
 
     def send_message(self):
         user_message = self.user_input.get()
         if user_message.strip():
             self.display_message(user_message, "user")
 
-            # OpenAI GPT-3.5 Turbo
-            self.messages.append({"role": "user", "content": user_message})
-            chat = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=self.messages)
-            bot_response = chat.choices[0].message.content
+            # Google Gemini
+            try:
+                response = self.chat_session.send_message(user_message)
+                bot_response = response.text
+            except Exception as e:
+                bot_response = f"Error querying Gemini API: {e}"
 
             self.display_message(bot_response, "bot")
             self.user_input.delete(0, "end")
