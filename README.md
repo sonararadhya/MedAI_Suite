@@ -7,7 +7,6 @@
 [![Python](https://img.shields.io/badge/Python-3.13-3776ab?logo=python&logoColor=white)](https://python.org)
 [![React](https://img.shields.io/badge/React-19-61dafb?logo=react&logoColor=white)](https://react.dev)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.136-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 [Features](#-features) · [Screenshots](#-screenshots) · [Architecture](#-architecture) · [Quick Start](#-quick-start) · [Algorithm](#-diagnostic-algorithm)
 
@@ -165,12 +164,6 @@ For each disease in the knowledge base:
 **Backend:** FastAPI · Python 3.13 · pandas · Google Gemini API  
 **Frontend:** React 19 · Vite · Recharts · Framer Motion · jsPDF · Lucide Icons  
 **Data:** 10,000+ synthesized clinical records · symptom severity mappings · precaution databases
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License.
 
 ---
 
