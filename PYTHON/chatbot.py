@@ -90,7 +90,11 @@ class ChatBotFrame(ctk.CTkFrame):
         self.entry.delete(0, "end")
         self.append_message("User", msg)
         
-        # Analyze using Gemini to extract exact symptoms from self.features
+        # Run in a daemon thread to prevent UI freezing
+        import threading
+        threading.Thread(target=self._process_message, args=(msg,), daemon=True).start()
+
+    def _process_message(self, msg):
         try:
             prompt = f"""
             You are a medical symptom extractor.

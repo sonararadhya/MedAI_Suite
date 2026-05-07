@@ -37,7 +37,7 @@ except Exception as e:
 
 precaution_dict = {}
 try:
-    with open(os.path.join(base_dir, '..', 'MasterData', 'symptom_precaution.csv')) as f:
+    with open(os.path.join(base_dir, 'MasterData', 'symptom_precaution.csv')) as f:
         reader = csv.reader(f)
         for row in reader:
             if len(row) >= 5:
@@ -46,7 +46,7 @@ except: pass
 
 description_dict = {}
 try:
-    with open(os.path.join(base_dir, '..', 'MasterData', 'symptom_Description.csv')) as f:
+    with open(os.path.join(base_dir, 'MasterData', 'symptom_Description.csv')) as f:
         reader = csv.reader(f)
         for row in reader:
             if len(row) >= 2:

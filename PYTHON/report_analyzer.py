@@ -41,7 +41,7 @@ class ReportAnalyzerFrame(ctk.CTkFrame):
             self.file_label.configure(text=os.path.basename(file_path))
             self.result_box.delete("1.0", "end")
             self.result_box.insert("end", "File selected. Analyzing with AI... Please wait.\n")
-            threading.Thread(target=self.analyze_report).start()
+            threading.Thread(target=self.analyze_report, daemon=True).start()
 
     def analyze_report(self):
         try:

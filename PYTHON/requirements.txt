@@ -1,0 +1,7 @@
+customtkinter==5.2.2
+pillow
+pandas
+scikit-learn
+python-dotenv
+google-generativeai
+joblib

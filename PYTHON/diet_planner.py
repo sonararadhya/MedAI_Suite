@@ -55,7 +55,7 @@ class DietPlannerFrame(ctk.CTkFrame):
     def generate_plan(self):
         self.result_box.delete("1.0", "end")
         self.result_box.insert("end", "Generating diet plan... Please wait.\n")
-        threading.Thread(target=self._run_generation).start()
+        threading.Thread(target=self._run_generation, daemon=True).start()
 
     def _run_generation(self):
         conditions = self.conditions_entry.get().strip()
