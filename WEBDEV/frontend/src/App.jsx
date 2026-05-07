@@ -1,11 +1,12 @@
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
-import { Activity, History, MessageSquare, Apple, AlertTriangle, Brain, HeartPulse } from 'lucide-react';
+import { Activity, History, MessageSquare, Apple, AlertTriangle, Brain, HeartPulse, FileText } from 'lucide-react';
 import Diagnosis from './pages/Diagnosis';
 import ChatBot from './pages/ChatBot';
 import PatientHistory from './pages/PatientHistory';
 import Nutrition from './pages/Nutrition';
 import Emergency from './pages/Emergency';
 import MentalHealth from './pages/MentalHealth';
+import ReportAnalyzer from './pages/ReportAnalyzer';
 
 function App() {
   return (
@@ -41,6 +42,10 @@ function App() {
             <MessageSquare size={18} />
             AI Advisor
           </NavLink>
+          <NavLink to="/report" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+            <FileText size={18} />
+            Report Analyzer
+          </NavLink>
           <NavLink to="/emergency" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
             <AlertTriangle size={18} />
             Emergency
@@ -55,6 +60,7 @@ function App() {
           <Route path="/mind" element={<MentalHealth />} />
           <Route path="/emergency" element={<Emergency />} />
           <Route path="/chat" element={<ChatBot />} />
+          <Route path="/report" element={<ReportAnalyzer />} />
         </Routes>
       </main>
     </Router>
