@@ -1,3 +1,4 @@
+import { API_BASE_URL } from "../config";
 import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import { Send, Bot, User } from 'lucide-react';
@@ -24,7 +25,7 @@ export default function ChatBot() {
     setLoading(true);
 
     try {
-      const res = await axios.post('http://127.0.0.1:8000/api/chat', {
+      const res = await axios.post(`${API_BASE_URL}/chat`, {
         message: userMsg,
         history: messages.filter(m => m.role !== 'system')
       });

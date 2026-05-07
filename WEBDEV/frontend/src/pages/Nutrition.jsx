@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Apple, Upload, AlertCircle } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+import { API_BASE_URL } from '../config';
 
 export default function Nutrition() {
   const [conditions, setConditions] = useState('');
@@ -29,7 +30,7 @@ export default function Nutrition() {
     }
 
     try {
-      const res = await fetch('http://localhost:8000/api/diet_plan', {
+      const res = await fetch(`${API_BASE_URL}/diet_plan`, {
         method: 'POST',
         body: formData,
       });

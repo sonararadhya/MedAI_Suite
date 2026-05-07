@@ -1,3 +1,4 @@
+import { API_BASE_URL } from "../config";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
@@ -13,7 +14,7 @@ export default function Diagnosis() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/api/symptoms')
+    axios.get(`${API_BASE_URL}/symptoms`)
       .then(res => setAvailableSymptoms(res.data.symptoms))
       .catch(err => console.error(err));
   }, []);
@@ -35,7 +36,7 @@ export default function Diagnosis() {
     if (symptoms.length === 0) return;
     setLoading(true);
     try {
-      const res = await axios.post('http://127.0.0.1:8000/api/diagnose', {
+      const res = await axios.post(`${API_BASE_URL}/diagnose`, {
         symptoms,
         days: parseInt(days)
       });

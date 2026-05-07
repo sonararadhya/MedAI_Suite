@@ -96,23 +96,15 @@ class ChatBotFrame(ctk.CTkFrame):
 
     def _process_message(self, msg):
         try:
-            prompt = f"""
-            You are a medical symptom extractor.
-            Given the user's text: "{msg}"
-            
-            Extract any symptoms that are explicitly mentioned or heavily implied.
-            Map them to the exact strings in this list: {self.features}
-            
-            Return ONLY a valid JSON list of matching strings. If none match, return [].
-            Example: ["headache", "skin_rash"]
-            """
-            
-            response = self.gemini_model.generate_content(prompt)
-            raw_text = response.text.strip().replace('```json', '').replace('```', '')
-            extracted_symptoms = json.loads(raw_text)
+            msg_lower = msg.lower()
+            extracted_symptoms = []
+            for sym in self.features:
+                clean_sym = sym.replace('_', ' ').lower()
+                if clean_sym in msg_lower:
+                    extracted_symptoms.append(sym)
             
             if not extracted_symptoms:
-                self.append_message("Bot", "I couldn't identify specific symptoms from your description. Could you be more specific?")
+                self.append_message("Bot", "I couldn't identify specific symptoms from your description. Could you be more specific? (e.g., 'headache', 'skin rash')")
                 return
             
             # Form vector

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Upload, FileText, AlertCircle } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+import { API_BASE_URL } from '../config';
 
 export default function ReportAnalyzer() {
   const [file, setFile] = useState(null);
@@ -28,7 +29,7 @@ export default function ReportAnalyzer() {
     formData.append('file', file);
 
     try {
-      const res = await fetch('http://localhost:8000/api/analyze_report', {
+      const res = await fetch(`${API_BASE_URL}/analyze_report`, {
         method: 'POST',
         body: formData,
       });
