@@ -172,4 +172,4 @@ For each disease in the knowledge base:
 </div>
 
 ---
-*📝 Last maintained: June 11, 2026 at 06:37 UTC*
+*📝 Last maintained: June 11, 2026 at 16:04 UTC*
